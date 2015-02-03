@@ -21,12 +21,12 @@ public class B {
 	int s=dr.findElements(By.xpath("html/body/div[4]/div[2]/div/div/aside/figure[2]/div/ul/li[2]/ul/li[1]/ul/li/ul/li")).size();
 	int s1=dr.findElements(By.xpath("html/body/div[4]/div[2]/div/div/section/section/div")).size();
 	for(int i=1;i<=s;i++)
-	{
-		dr.findElement(By.xpath("html/body/div[4]/div[2]/div/div/aside/figure[2]/div/ul/li[2]/ul/li[1]/ul/li/ul/li["+i+"]/a")).click();
+	{Thread.sleep(2000);
+		dr.findElement(By.xpath("html/body/div[4]/div[2]/div/div/aside/figure[2]/div/ul/li[2]/ul/li[1]/ul/li/ul/li["+i+"]/a/b")).click();
 		
 		Thread.sleep(2000);
 
-		  for(int j=1;j<=s1;j++)
+		  for(int j=1;j<3;j++)
 				{
 					dr.findElement(By.xpath("html/body/div[4]/div[2]/div/div/section/section/div["+j+"]/figure/a/img")).click();
 					Thread.sleep(2000);
